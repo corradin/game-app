@@ -10,7 +10,7 @@ import { GameCharacter } from './game-character';
 const httpOptions = {
     headers: new HttpHeaders({ 
       'Accept': 'application/json',
-      'X-Mashape-Key': '[It`s a secret]'
+      'X-Mashape-Key': `[it's a secret]`
     })
   };
 
