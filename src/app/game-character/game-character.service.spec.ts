@@ -51,7 +51,7 @@ describe('Http-GameCharacterService (mockBackend)', () => {
     it('can instantiate service with "new"', inject([HttpClient], (httpClient: HttpClient) => {
         expect(httpClient).not.toBeNull('http should be provided');
         let service = new GameCharacterService(httpClient);
-        expect(service instanceof GameCharacterService).toBe(false, 'new service should be ok');
+        expect(service instanceof GameCharacterService).toBe(true, 'new service should be ok');
     }));
 
     describe('when getGameCharacters', () => {
