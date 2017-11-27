@@ -28,3 +28,7 @@ COPY . /game-app
 #Replace a setting in the Karma test runner to only run once  
 RUN sed -i "s|singleRun: false|singleRun: true|g" karma.conf.js
 RUN ng test && ng build
+
+# Make port 4200 available to the world outside this container
+EXPOSE 4200
+CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "4200"]
