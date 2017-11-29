@@ -39,6 +39,7 @@ RUN apk --update add nginx php5-fpm && \
 ADD nginx.conf /etc/nginx/
 ADD php-fpm.conf /etc/php5/php-fpm.conf
 ADD run.sh /run.sh
+ONBUILD RUN chmod +x run.sh
 
 ENV LISTEN_PORT=80
 
